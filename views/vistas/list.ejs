@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my App Products</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/header-footer.css" />
+    <link rel="stylesheet" href="../../css/products-list.css" />
+  </head>
+  <body>
+
+    <%- include('../partials/header.ejs') %>
+    <!-- <header>
+      <h3>My app</h3>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About Us</a>
+          </li>
+          <li>
+            <a href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header> -->
+    <main>
+      <section class="products">
+        <h1>Honda tewttes 125cc</h1>
+        <ul>
+          <% for (product of products) { %>
+          <li>
+            <a href="/products/<%= product.id %>">
+              <img
+                src="https://www.mundomotero.com/wp-content/uploads/2020/04/HONDA_CB125F_2021-7.jpg"
+                alt="moto-honda"
+              />
+              <h3><%= product.name %></h3>
+              <p><%= product.description %></p>
+            </a>
+          </li>
+          <%}%>
+        </ul>
+      </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+    <!-- <footer>
+      <h3>My app</h3>
+      <ul>
+        <li><a href="#">facebook</a></li>
+        <li><a href="#">instegram</a></li>
+        <li><a href="#">linkedin</a></li>
+      </ul>
+    </footer> -->
+  </body>
+</html>

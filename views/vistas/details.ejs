@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../../css/header-footer.css">
 </head>
 <body>
-    <header>
+    <%- include('../partials/header.ejs') %>
+    <!-- <header>
         <h3>My app</h3>
         <nav>
             <ul>
@@ -24,9 +25,13 @@
                 </li>
             </ul> 
         </nav>
-    </header>
-    <main></main>
-    <footer>
+    </header> -->
+
+    <main>
+        <h1><%= product.name %></h1>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <!-- <footer>
         <h3>My app</h3>
         <ul>
             <li><a href="#">facebook</a></li>
@@ -35,6 +40,6 @@
 
 
         </ul>
-    </footer>
+    </footer> -->
 </body>
 </html> 
